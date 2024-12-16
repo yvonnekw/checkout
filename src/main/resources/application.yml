@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: checkout-service
+  config:
+    import: optional:configserver:http://localhost:8887
