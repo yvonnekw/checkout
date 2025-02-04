@@ -22,6 +22,7 @@ public class CheckoutController {
 
     @PostMapping("/process-payment")
     public ResponseEntity<PaymentResponse> processPayment(
+            @RequestHeader("Authorization") String token,
             @RequestHeader("X-Username") String username,
             @RequestHeader("X-FirstName") String firstName,
             @RequestHeader("X-LastName") String lastName,
