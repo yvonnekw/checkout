@@ -1,7 +1,6 @@
 package com.auction.checkout.controller;
 
 import com.auction.checkout.client.PaymentServiceClient;
-import com.auction.checkout.dto.CheckoutResponse;
 import com.auction.checkout.dto.PaymentRequest;
 import com.auction.checkout.dto.PaymentResponse;
 import com.auction.checkout.service.CheckoutService;
@@ -38,16 +37,5 @@ public class CheckoutController {
         }
     }
 
-    /*
-    @PostMapping
-    public ResponseEntity<?> processCheckout(@RequestHeader("X-Username") String username) {
-        try {
-            CheckoutResponse response = checkoutService.processCheckout(username);
-            return ResponseEntity.ok(response);
-        } catch (Exception e) {
-            log.error("Error during checkout for user: {}", username, e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Checkout failed: " + e.getMessage());
-        }
-    }*/
 }
 
